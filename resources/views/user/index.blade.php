@@ -38,9 +38,9 @@
                                 <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Username</h6>
                                 </th>
-                                <th class="border-bottom-0">
+                                {{-- <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Email</h6>
-                                </th>
+                                </th> --}}
                                 <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Role</h6>
                                 </th>
@@ -64,12 +64,12 @@
                                         <p class="mb-0 fw-normal">{{ $item->username }}</p>
                                     </div>
                                 </td>
-                                <td class="border-bottom-0">
+                                {{-- <td class="border-bottom-0">
                                     <p class="mb-0 fw-normal">
                                         <i class="ti ti-mail me-1 text-muted"></i>
                                         {{ $item->email ?? '-' }}
                                     </p>
-                                </td>
+                                </td> --}}
                                 <td class="border-bottom-0">
                                     @if($item->role == 'admin')
                                         <span class="badge bg-danger rounded-3 fw-semibold">

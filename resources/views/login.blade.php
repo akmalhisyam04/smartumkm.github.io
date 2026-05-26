@@ -316,7 +316,7 @@
                         <i class="ti ti-mail"></i>
                         <input type="text" 
                                 name="username" 
-                                placeholder="nama@email.com"
+                                placeholder="Masukkan Username"
                                 value="{{ old('username') }}"
                                 required>
                     </div>
@@ -328,7 +328,7 @@
                         <i class="ti ti-lock"></i>
                         <input type="password" 
                                 name="password" 
-                                placeholder="Masukkan kata sandi"
+                                placeholder="Masukkan Password"
                                 required>
                     </div>
                 </div>

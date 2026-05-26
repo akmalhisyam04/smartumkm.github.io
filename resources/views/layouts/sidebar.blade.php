@@ -144,7 +144,7 @@
                         <img src="{{ asset('assets/images/backgrounds/shop.png') }}"
                             alt="shop"
                             class="img-fluid"
-                            style="max-width: 80px; height: auto;">
+                            style="max-width: 70px; height: auto;">
                     </div>
                 </div>
             </div>
