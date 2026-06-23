@@ -43,8 +43,8 @@
                             <div class="mb-3">
                                 <label class="form-label fw-semibold">Kode Transaksi <span class="text-danger">*</span></label>
                                 <input type="text" name="kode_transaksi" class="form-control @error('kode_transaksi') is-invalid @enderror" 
-                                       value="{{ old('kode_transaksi', $transaksi->kode_transaksi) }}" placeholder="TRX/2025/001" required readonly
-                                       style="background-color: #f8f9fa;">
+                                        value="{{ old('kode_transaksi', $transaksi->kode_transaksi) }}" placeholder="TRX/2025/001" required readonly
+                                        style="background-color: #f8f9fa;">
                                 @error('kode_transaksi')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -90,7 +90,7 @@
                                 <label class="form-label fw-semibold">Metode Pembayaran <span class="text-danger">*</span></label>
                                 <select name="metode_pembayaran" class="form-select @error('metode_pembayaran') is-invalid @enderror" required>
                                     <option value="">-- Pilih Metode --</option>
-                                    <option value="cash" {{ old('metode_pembayaran', $transaksi->metode_pembayaran) == 'cash' ? 'selected' : '' }}>💵 Cash (Tunai)</option>
+                                    <option value="tunai" {{ old('metode_pembayaran', $transaksi->metode_pembayaran) == 'tunai' ? 'selected' : '' }}>💵 Cash (Tunai)</option>
                                     <option value="transfer" {{ old('metode_pembayaran', $transaksi->metode_pembayaran) == 'transfer' ? 'selected' : '' }}>🏦 Transfer Bank</option>
                                     <option value="e-wallet" {{ old('metode_pembayaran', $transaksi->metode_pembayaran) == 'e-wallet' ? 'selected' : '' }}>📱 E-Wallet</option>
                                 </select>

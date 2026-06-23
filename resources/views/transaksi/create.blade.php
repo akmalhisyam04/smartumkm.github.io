@@ -66,7 +66,7 @@
                                 <div class="input-group">
                                     <span class="input-group-text">Rp</span>
                                     <input type="number" name="total_harga" class="form-control @error('total_harga') is-invalid @enderror" 
-                                           value="{{ old('total_harga') }}" placeholder="0" required min="0">
+                                            value="{{ old('total_harga') }}" placeholder="0" required min="0">
                                 </div>
                                 @error('total_harga')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -79,7 +79,7 @@
                                 <label class="form-label fw-semibold">Metode Pembayaran <span class="text-danger">*</span></label>
                                 <select name="metode_pembayaran" class="form-select @error('metode_pembayaran') is-invalid @enderror" required>
                                     <option value="">-- Pilih Metode --</option>
-                                    <option value="cash" {{ old('metode_pembayaran') == 'cash' ? 'selected' : '' }}>💵 Cash (Tunai)</option>
+                                    <option value="tunai" {{ old('metode_pembayaran') == 'tunai' ? 'selected' : '' }}>💵 Cash (Tunai)</option>
                                     <option value="transfer" {{ old('metode_pembayaran') == 'transfer' ? 'selected' : '' }}>🏦 Transfer Bank</option>
                                     <option value="e-wallet" {{ old('metode_pembayaran') == 'e-wallet' ? 'selected' : '' }}>📱 E-Wallet</option>
                                 </select>
@@ -93,7 +93,7 @@
                             <div class="mb-3">
                                 <label class="form-label fw-semibold">Tanggal Transaksi <span class="text-danger">*</span></label>
                                 <input type="date" name="tanggal_transaksi" class="form-control @error('tanggal_transaksi') is-invalid @enderror" 
-                                       value="{{ old('tanggal_transaksi', date('Y-m-d')) }}" required>
+                                        value="{{ old('tanggal_transaksi', date('Y-m-d')) }}" required>
                                 @error('tanggal_transaksi')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror

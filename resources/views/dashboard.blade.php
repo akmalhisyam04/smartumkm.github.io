@@ -229,7 +229,7 @@
                         </thead>
                         <tbody>
                             @php
-                                $transaksiTerbaru = \App\Models\Transaksi::with('pelanggan')->latest()->take(5)->get();
+                                $transaksiTerbaru = \App\Models\Transaksi::with('pengguna')->latest()->take(5)->get();
                             @endphp
                             
                             @forelse($transaksiTerbaru as $transaksi)
@@ -237,7 +237,7 @@
                                 <td>
                                     <span class="fw-semibold">#{{ $transaksi->kode_transaksi ?? $transaksi->id }}</span>
                                 </td>
-                                <td>{{ $transaksi->pelanggan->nama ?? 'Umum' }}</td>
+                                <td>{{ $transaksi->pengguna->nama ?? 'Umum' }}</td>
                                 <td>{{ $transaksi->created_at->format('d/m/Y H:i') }}</td>
                                 <td>
                                     <span class="fw-semibold text-success">
@@ -266,7 +266,7 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <a href="{{ route('transaksi.show', $transaksi->id) }}" 
+                                    <a href="{{ route('transaksi.show', $transaksi->id_transaksi) }}" 
                                         class="btn btn-sm btn-outline-primary rounded-circle"
                                         style="width: 30px; height: 30px; padding: 0; line-height: 28px;">
                                         <i class="ti ti-eye fs-5"></i>

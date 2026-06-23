@@ -76,8 +76,8 @@
                                     <p class="mb-0 fw-semibold text-success">Rp {{ number_format($item->total_harga, 0, ',', '.') }}</p>
                                 </td>
                                 <td class="border-bottom-0">
-                                    <span class="badge {{ $item->metode_pembayaran == 'cash' ? 'bg-success' : 'bg-info' }} rounded-3 fw-semibold">
-                                        <i class="ti ti-{{ $item->metode_pembayaran == 'cash' ? 'wallet' : 'credit-card' }} me-1"></i>
+                                    <span class="badge {{ $item->metode_pembayaran == 'tunai' ? 'bg-success' : 'bg-info' }} rounded-3 fw-semibold">
+                                        <i class="ti ti-{{ $item->metode_pembayaran == 'tunai' ? 'wallet' : 'credit-card' }} me-1"></i>
                                         {{ ucfirst($item->metode_pembayaran) }}
                                     </span>
                                 </td>

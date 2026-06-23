@@ -29,7 +29,7 @@ class DashboardController extends Controller
             $totalPendapatan = Transaksi::sum('total_harga');
             $totalStokTerjual = DetailTransaksi::sum('jumlah');
             $transaksiBulanIni = Transaksi::whereMonth('created_at', date('m'))->count();
-            $transaksiTerbaru = Transaksi::with('pelanggan')->latest()->take(5)->get();
+            $transaksiTerbaru = Transaksi::with('pengguna')->latest()->take(5)->get();
         } else {
             $totalTransaksi = 0;
             $totalPendapatan = 0;
